@@ -66,9 +66,12 @@ class CreateTodo extends Component {
   }
 };
 
+
 mapDispatchToProps = dispatch => {
   return {
-    addTodo: formData => dispatch(<some action>)
+    // In terms of action, we could write out a separate actions file and import it in, 
+    // but for now, we'll just write in an action to get a clearer idea of how this is working:
+    addTodo: formData => dispatch( {type: 'ADD_TODO', payload: formData} )
   }
 }
 // Since we only need to dispatch an action here and not getting information from our store,
