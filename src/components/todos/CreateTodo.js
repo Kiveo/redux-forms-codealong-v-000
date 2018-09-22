@@ -49,10 +49,15 @@ class CreateTodo extends Component {
     });
   }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.addTodo(this.state)
+  }
+
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={ event => this.handleSubmit(event) }>
           <p>
             <label>add todo</label>
             <input
@@ -69,7 +74,7 @@ class CreateTodo extends Component {
 
 mapDispatchToProps = dispatch => {
   return {
-    // In terms of action, we could write out a separate actions file and import it in, 
+    // In terms of action, we could write out a separate actions file and import it in,
     // but for now, we'll just write in an action to get a clearer idea of how this is working:
     addTodo: formData => dispatch( {type: 'ADD_TODO', payload: formData} )
   }
