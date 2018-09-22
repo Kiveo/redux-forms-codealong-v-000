@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 constructor() {
   super();
   this.state = {
@@ -64,4 +66,6 @@ class CreateTodo extends Component {
   }
 };
 
-export default CreateTodo;
+
+
+export default connect(null, mapDispatchToProps)(CreateTodo);
