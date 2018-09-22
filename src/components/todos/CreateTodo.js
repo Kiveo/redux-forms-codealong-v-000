@@ -5,9 +5,9 @@ class CreateTodo extends Component {
     return(
       <div>
         <form>
-          <p> 
+          <p>
             <label>add todo</label>
-            <input type="text"> 
+            <input type="text" />
           </p>
           <input type="submit" />
         </form>
