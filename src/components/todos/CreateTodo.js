@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 constructor() {
-  super()
-  state = {
-    text: ''
+  super();
+  this.state = {
+    text: '',
   };
 }
 
-handleChange = (event) => {
+handleChange(event) {
   this.setState({
     text: event.target.value
-  })
-}
+  });
+};
 
 class CreateTodo extends Component {
   render() {
