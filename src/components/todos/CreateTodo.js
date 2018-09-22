@@ -66,7 +66,11 @@ class CreateTodo extends Component {
   }
 };
 
-
-// Since we only need to dispatch an action here and not getting information from our store, 
+mapDispatchToProps = dispatch => {
+  return {
+    addTodo: formData => dispatch(<some action>)
+  }
+}
+// Since we only need to dispatch an action here and not getting information from our store,
 // we can use null instead of mapStateToProps as the first argument.
 export default connect(null, mapDispatchToProps)(CreateTodo);
